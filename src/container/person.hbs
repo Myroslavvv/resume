@@ -1,106 +1,51 @@
 
 <div>
   {{> title data="Biography" big=true}}
-                
                 {{#with person}}
             <header>
                 <div>
-                    <h1>{{name}} {{age}} {{gender}}</h1>
+                    <h1>{{name}} ({{age}}) {{gender}}</h1>
                 </div>
-
                 <div>
                   <ul>
-                      {{address}}
-                      <li>street</li>
-                      <li>city</li>
-                      <li>state</li>
-                      <li>zip</li>
-                      <li>country</li>
+                      {{#with address}}
+                      <h3><em>Address</em></h3>
+                        <li>Street:{{street}}</li>
+                        <li>City:{{city}}</li>
+                        <li>State:{{state}}</li>
+                        <li>Zip:{{zip}}</li>
+                        <li>Country:{{country}}</li>
+                      {{/with}}
                   </ul>
                 </div>
-
                 <hr>
                 <br>
-            
-                {{!-- <div>
-                    <em>
-                        {{salary}}
-                    </em>
-                </div>
-
-                <br>
-                <hr>
-                <br>
-
                 <div>
-                    <em>
-                        {{address}}
-                    </em>
+                  <ul>
+                      {{#each education}}
+                       <h3><em>Education</em></h3>
+                        <li>degree:{{degree}}</li>
+                        <li>major:{{major}}</li>
+                        <li>startDate:{{university}}</li>
+                        <li>graduationYear:{{graduationYear}}</li>
+                      {{/each}}
+                  </ul>
                 </div>
-                <br>
                 <hr>
-            </header> --}}
+                <br>
+                <div>
+                  <ul>
+                      {{#each workExperience}}
+                       <h3><em>WorkExperience</em></h3>
+                        <li>
+                        <div>Company:{{company}}</div> 
+                        <div>{{title}}</div> 
+                        <div>{{startDate}} - {{endDate}}</div>
+                        <ul><li>{{responsibilities}}</li></ul>
+                        </li>
+                      {{/each}}
+                  </ul>
+                </div>
+            </header>
         {{/with}}
-                {{!-- <div>
-                    <ul>
-                        {{#each person}}
-                            <li>
-                                <div>{{position}}</div>
-                                <br>
-                                <div>{{duration.from}} -
-                                    {{#if duration.to}} 
-                                        {{duration.to}} 
-                                    {{else}} 
-                                        (досі працюємо) 
-                                    {{/if}}
-                                </div>
-
-                                <br>
-                                
-                                <div>{{#if company.url}} 
-                                        {{> link text=company.name href=company.url blank=true noLine=true}} 
-                                    {{else}} 
-                                        <b>{{company.name}}</b>
-                                    {{/if}}
-                                </div>                       
-
-                                <br>
-                                <br>
-
-                                <div><strong>Projects ({{projectAmount}})</strong> </div>
-                                <br>
-                                <ul>
-                                    {{#each projects}}
-                                    <li> 
-                                        <div>{{> link text=name href=company.url blank=true noLine=true}}</div>
-                                        <br>
-                                        <div><p>{{about}}</p></div>
-                                        <br>
-                                        <div><em>Project stacks ({{stackAmount}})</em></div>
-                                        <br>
-                                        <div>
-                                            <ul>
-                                                {{#each stacks}}
-                                                    <li>{{name}}</li>
-                                                {{/each}}
-                                            </ul>
-                                        </div>
-                                        <br>
-                                        <div><em>Project awards ({{awardAmount}})</em></div>
-                                        <br>
-                                        <div>
-                                            <ul>
-                                                {{#each awards}}
-                                                    <li>{{name}}</li>
-                                                {{/each}}
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    {{/each}}
-                                </ul>
-                            </li>
-                        {{/each}}
-                   </ul> --}}
-                {{!-- </div> --}}
-  
 </div>
