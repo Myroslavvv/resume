@@ -14,8 +14,16 @@
                     {{#with seats}}
                         <li>material: {{material}}</li>
                         <li>color: {{color}}</li>
-                        {{!-- <li>color: {{color}}</li> --}}
-                        {{!-- <li>color: {{color}}</li> --}}
+                            <li>
+								{{#if heated}}
+                               		<em>heated</em>
+                            	{{/if}}
+							</li>
+                            <li>
+								{{#if ventilated}}
+                               		<em>ventilated</em>
+                            	{{/if}}
+							</li>
                     {{/with}}
                 </ul>
 
@@ -24,12 +32,16 @@
                     {{#with dashboard}}
                         <li>material: {{material}}</li>
                         <li>color: {{color}}</li>
-                            <em>display</em>
+                        <u><b>display:</b></u>
                             {{#with display}}
                                 <li>type: {{type}}</li>
                                 <li>size: {{size}}</li>
                                 <li>resolution: {{resolution}}</li>
-                                {{!-- <li>color: {{color}}</li> --}}
+                               	<li>
+									{{#if touchscreen}}
+                               			<em>touchscreen</em>
+                            		{{/if}}
+								</li>
                             {{/with}}
                     {{/with}}
                 </ul>
@@ -39,9 +51,21 @@
                     {{#with audio}}
                         <li>system: {{system}}</li>
                         <li>speakers: {{speakers}}</li>
-                        {{!-- <li>color: {{color}}</li> --}}
-                        {{!-- <li>color: {{color}}</li> --}}
-                        {{!-- <li>color: {{color}}</li> --}}
+                        <li>
+							{{#if subwoofer}}
+                               <em>subwoofer</em>
+							{{/if}}
+						</li>
+                        <li>
+							{{#if bluetooth}}
+                               <em>bluetooth</em>
+							{{/if}}
+						</li>
+                        <li>
+							{{#if USB}}
+                               <em>USB</em>
+							{{/if}}
+						</li>
                     {{/with}}
                 </ul>
             {{/with}}
@@ -62,7 +86,11 @@
                     {{#with headlights}}
                         <li>type: {{type}}</li>
                         <li>brightness: {{brightness}}</li>
-                        {{!-- <li>color: {{color}}</li> --}}
+                        <li>
+							{{#if automatic}}
+                               <em>automatic</em>
+							{{/if}}
+						</li>
                     {{/with}}
                 </ul>
 
@@ -71,7 +99,11 @@
                     {{#with sunroof}}
                         <li>type: {{type}}</li>
                         <li>size: {{size}}</li>
-                        {{!-- <li>color: {{color}}</li> --}}
+                        <li>
+							{{#if automatic}}
+                               <em>automatic</em>
+							{{/if}}
+						</li>
                     {{/with}}
                 </ul>
             {{/with}}
@@ -91,11 +123,31 @@
                 <div><h3>assistance: </h3></div>
                 <ul>
                     {{#with assistance}}
-                        {{!-- <li>front: {{front}}</li> --}}
-                        {{!-- <li>side: {{side}}</li> --}}
-                        {{!-- <li>knee: {{knee}}</li> --}}
-                        {{!-- <li>rear: {{rear}}</li> --}}
-                        {{!-- <li>rear: {{rear}}</li> --}}
+                        <li>
+							{{#if blind_spot_monitoring}}
+                               <em>blind_spot_monitoring</em>
+							{{/if}}
+						</li>
+                        <li>
+							{{#if rear_cross_traffic_alert}}
+                               <em>rear_cross_traffic_alert</em>
+							{{/if}}
+						</li>
+                        <li>
+							{{#if lane_departure_warning}}
+                               <em>lane_departure_warning</em>
+							{{/if}}
+						</li>
+                        <li>
+							{{#if adaptive_cruise_control}}
+                               <em>adaptive_cruise_control</em>
+							{{/if}}
+						</li>
+                        <li>
+							{{#if collision_warning}}
+                               <em>collision_warning</em>
+							{{/if}}
+						</li>
                     {{/with}}
                 </ul>
             {{/with}}
