@@ -1,0 +1,79 @@
+
+<div>
+  {{> title data="PROGRAM" big=true}}
+   	{{#with program}}
+   		{{#with excursion}}
+			<div>
+				<h1>{{name}} in {{location.city}} ({{location.country}})</h1> 
+				<h4>{{date}}</h4>
+				<div><h2>Program Today :</h2></div>
+				<div>
+					<ol>
+						{{#each program}} 
+							<li>
+								<div><h3>{{name}}</h3></div></li>
+								<div>
+									<ul>
+										<li><em>type:{{type}}</em>
+										<li><em>duration:({{duration}}) hours</em></li>
+									</ul>
+								</div>
+								<br>
+								<div>
+									{{#with details}}
+										<div>
+											{{#with museum}}
+												<div>details museum:{{name}}</div>
+												{{#with location}}
+													<div>address:{{address}}, {{city}}, {{country}} </div>
+												{{/with}}
+													<br>
+												<div><strong>exhibits:</strong></div>
+													<ul>
+														{{#each exhibits}}
+															<li>
+																<div>{{name}}, {{artist}}, {{description}}</div>
+																<div>{{#if audio_guide}}
+																	(з аудіо супровідом)
+																{{else}}
+																	(без аудіо супровідом)
+																{{/if}}
+																</div>
+															</li>
+														{{/each}}
+													</ul>
+											{{/with}}
+											{{#with venue}}
+												<div>details venue:{{name}}</div>
+												{{#with location}}
+													<div>address:{{address}}, {{city}}, {{country}} </div>
+												{{/with}}
+											{{/with}}
+											<br>
+											{{#if performers}}
+												<strong>performers:</strong>
+											{{/if}}
+												<ul>
+													{{#each performers}}
+														<li>{{name}} - {{type}}</li>
+													{{/each}}
+												</ul>
+											<br>
+											<div> 
+											{{#with guide}} 
+												<div><strong>guide:</strong>{{name}}</div>
+												<div>{{language}}, <small>rating:{{rating}}</small></div>
+											{{/with}}
+											</div>
+										</div>
+										<hr>
+									{{/with}}
+								</div>
+							</li>
+						{{/each}}	  
+					</ol>
+				</div>
+			</div>
+		{{/with}}
+	{{/with}}
+</div>
