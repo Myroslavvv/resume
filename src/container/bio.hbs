@@ -1,0 +1,45 @@
+
+<div>
+  {{> title data="Biography Albert" big=true}}
+		<header>
+		<div>
+			<h1>{{name}}</h1>
+			<ul>
+				<li>birthdate:{{birthdate}}</li>
+				<li>birthplace:{{birthplace}}</li>
+				<li>deathdate:{{deathdate}}</li>
+				<li>deathplace:{{deathplace}}</li>
+				<li>nationality:{{nationality}}</li>
+				<li>occupation:{{occupation}}</li>
+			</ul>
+				<br>
+			<ul>
+				<h3><em>known for:</em></h3>
+					{{#each known_for}}
+						<li>{{this}}</li>
+					{{/each}}
+			</ul>
+			<div>
+				<ul>
+					{{#each education}}
+					<h3><em>Education</em></h3>
+						<li>field:{{field}}</li>
+						<li>institution:{{institution}}</li>
+						<li>year:{{year}}</li>
+					{{/each}}
+				</ul>
+			</div>
+				<h3><em>Notable_publications</em></h3>
+			<div>
+				<ul>
+					{{#each notable_publications}}
+						<li>title:{{title}}</li>
+						<li>year:{{year}}</li>
+						<li>publisher:{{publisher}}</li>
+						<hr>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</header>
+</div>
