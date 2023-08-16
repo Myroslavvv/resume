@@ -180,21 +180,21 @@
         </ul>
 
          <div><h3>price: </h3></div>
-            <ul>
-                {{#with price}}
-                    <li>base: {{base}}</li>
-                    <li>destination: {{destination}}</li>
-                        <div><h3>options: </h3></div>
-                        <ul>
-                            {{#with options}}
-                                <li>navigation: {{navigation}}</li>
-                                <li>moonroof: {{moonroof}}</li>
-                                <li>premium_paint: {{premium_paint}}</li>
-                            {{/with}}
-                        </ul>
-                    <li>total: {{total}}</li>
-                {{/with}}
-            </ul>
+        <ul>
+            {{#with price}}
+                <li>base: {{base}}</li>
+                <li>destination: {{destination}}</li>
+                    <div><h3>options: </h3></div>
+                    <ul>
+                        {{#with options}}
+                            <li>navigation: {{navigation}}</li>
+                            <li>moonroof: {{moonroof}}</li>
+                            <li>premium_paint: {{premium_paint}}</li>
+                        {{/with}}
+                    </ul>
+                <li>total: {{total}}</li>
+            {{/with}}
+        </ul>
     </div>
 </div>
 
