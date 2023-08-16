@@ -562,6 +562,20 @@ layout: 'program',
 
 // ================================================================
 
+
+router.get('/bootstrap', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+
+layout: 'bootstrap',
+
+  })
+ 
+})
+
+
+
+
 // Підключаємо роутер до бек-енду
 module.exports = router
 
