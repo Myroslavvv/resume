@@ -1,0 +1,130 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+
+    <div><h1>{{name}}</h1></div>
+    <div><h3>{{category}}</h3></div>
+    <div><h4>{{description}}</h4></div>
+    <div><h2>price: {{price}}$</h2></div>
+
+    <div><u><b>features:</b></u></div>
+        <div>
+        {{#with features}}
+        <br>
+            <div><em>processor:</em></div>
+            <div>
+                {{#with processor}}
+                    <li>brand: {{brand}}</li>
+                    <li>model: {{model}}</li>
+                    <li>speed: {{speed}}</li>
+                    <li>cores: {{cores}}</li>
+                    <li>cache: {{cache}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>memory:</em></div>
+            <div>
+                {{#with memory}}
+                    <li>type: {{type}}</li>
+                    <li>size: {{size}}</li>
+                    <li>speed: {{speed}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>storage:</em></div>
+            <div>
+                {{#with storage}}
+                    <li>type: {{type}}</li>
+                    <li>size: {{size}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>display:</em></div>
+            <div>
+                {{#with display}}
+                    <li>size: {{size}}</li>
+                    <li>resolution: {{resolution}}</li>
+                    <li>technology: {{technology}}</li>
+                    <li>color_space: {{color_space}}</li>
+                    <li>brightness: {{brightness}}</li>
+                    <li>refresh_rate: {{refresh_rate}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>graphics:</em></div>
+            <div>
+                {{#with graphics}}
+                    <li>brand: {{brand}}</li>
+                    <li>model: {{model}}</li>
+                    <li>memory: {{memory}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>ports:</em></div>
+            <div>
+                <ul>
+                    {{#each ports}}
+                        <li>type: {{type}}</li>
+                        <li>count: {{count}}</li>
+                            {{#if features}}
+                            <li>
+                                <div><em>features:</em></div>
+                                <div>
+                                    <ul>
+                                        {{#each features}}
+                                            <li>{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                            {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        <br>
+            <div><em>battery:</em></div>
+            <div>
+                {{#with battery}}
+                    <li>type: {{type}}</li>
+                    <li>capacity: {{capacity}}</li>
+                    <li>life: {{life}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>weight: {{weight}}</em></div>
+            <div><em>dimensions:</em></div>
+            <div>
+                {{#with dimensions}}
+                    <li>height: {{height}}</li>
+                    <li>width: {{width}}</li>
+                    <li>depth: {{depth}}</li>
+                {{/with}}
+            </div>
+        <br>
+            <div><em>operating_system: {{operating_system}}</em></div>
+            <div><em>accessories:</em></div>
+            <div>
+                <ul>
+                    {{#each accessories}}
+                        <li>name: {{name}}</li>
+                        <li>price: {{price}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        {{/with}}
+        </div>
+<<<<<<< HEAD
+   
+=======
+ 
+>>>>>>> 921af5b6cfd7ec73970a3bbfe0e0ad4926c31892
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
