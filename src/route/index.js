@@ -591,12 +591,14 @@ router.get('/task22', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
+
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
+
     navigation: {
       links: [
         {
@@ -612,6 +614,7 @@ router.get('/shophome', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
+
     },
 
     newsBlock: {
@@ -873,6 +876,7 @@ router.get('/shophome', function (req, res) {
         },
       ],
     ],
+
   })
   //                  ↑↑ сюди вводимо JSON дані
 })

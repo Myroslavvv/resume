@@ -1,3 +1,4 @@
+
 <main class="p-5">
 	<div class="row"> {{!-- контейнер --}}
 		<div class="col-12 mb-5"> 
@@ -74,4 +75,395 @@
 				</div>
 			</div>
 		</div>
+
+{{!-- <main class="text-bg-warning"> --}}
+<main>
+
+	<div class="card">  {{!-- картка з рамкою --}}
+		<div class="card-img-top">  {{!-- верх картки --}}
+			Верх
+			<img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo"> {{!-- картинка --}}
+			<div class="card-body">   {{!-- тіло картки --}}
+				<h5 class="card-title">титулка</h5>  {{!-- титулка картки --}}
+				<p>тіло</p>
+				{{!-- <div>тіло</div> --}}
+				<a href="/work" class="btn btn-primary">OPEN</a> {{!-- посилання-кнопка --}}
+			</div>
+		</div>
+	</div> 
+
+	<br>
+
+		<ul class="list-group">  {{!-- створення списку --}}
+		<li class="list-group-item text-center">  {{!-- створення ячейки в списку --}}
+			<ul class="list-group">
+				<li class="list-group-item text-center">one-one</li>
+				<li class="list-group-item text-center">one-two</li>
+			</ul>
+		</li>
+		<li class="list-group-item text-end">two</li>
+		<li class="list-group-item">three</li>
+	</ul>
+
+	<br>
+
+	<div class="card">  {{!-- картка з рамкою --}}
+			{{!-- <div class="card-body">  --}}  {{!-- тіло картки --}}
+			<div class="card-header">   {{!-- заголовок картки --}}
+				<h5 class="card-title">Menu</h5>  {{!-- титулка картки --}}
+			</div>
+				
+				<ul class="list-group">  {{!-- створення списку --}}
+					<li class="list-group-item text-center">one</li>  {{!-- створення ячейки в списку --}}
+					<li class="list-group-item">
+						<a href="#" class="btn btn-link">Home</a> {{!-- посилання --}}
+					</li>
+					<li class="list-group-item">three</li>
+				</ul>
+				<div class="card-footer">  {{!-- клас нижній футер --}}
+					<button class="btn btn-dark btn-sm">Update List</button> {{!-- кнопка --}}
+				</div>
+		</div>
+	</div> 
+
+	<br>
+
+	<table class="table table-striped table-bordered text-bg-success">  {{!-- таблиця --}}
+		{{!-- table-striped - сірим через одну строку --}}
+		{{!-- table-bordered - рамка навколо табл і елементів --}}
+				<thead>  {{!-- горизонтально  --}}
+					<tr>	{{!-- строка --}}
+						<th>   {{!-- жирним ячейка --}}
+							#id
+						</th>
+						<th>
+							name
+						</th>
+						<th>
+							age
+						</th>
+						
+					</tr>
+				</thead>
+
+				 <tbody>   {{!-- горизонтально --}}
+					<tr>
+						<th>1</th>
+						<td>John</td> {{!-- НЕ жирним ячейка --}}
+						<td>35</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Ivan</td>
+						<td>39</td>
+					</tr>
+					<tr>
+						<th>1</th>
+						<td>John</td>
+						<td>35</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Ivan</td>
+						<td>39</td>
+					</tr>
+				</tbody>
+			</table>
+
+	{{!-- <br>
+
+	<div class="card text-bg-success">
+		<div class="card-header text-center">Header</div>
+		<div class="card-body text-center">Content
+			<p class="card-title">Title</p>
+			<button class="btn btn-light">Click</button>
+			<div class="card-footer text-center">Footer</div>
+		</div>
+	</div> --}}
+
+	<br>
+
+	<div class="row g-5">  {{!-- КОНТЕЙНЕР --}}
+		{{!-- g-5 верт+гориз розрив --}}
+		{{!-- gy-5 верт розрив  --}}
+		{{!-- gx-5 гориз розрив --}}
+		<div class="col-3"> {{!-- ширина стовпчика із 12 --}}
+			<div class="card text-bg-success"> {{!-- задня стіна краска --}} 
+				<div class="card-header text-center">Header</div> {{!-- верх картки --}}
+				<div class="card-body text-center">Content  {{!-- тіло картки --}}
+					<p class="card-title">Title</p> {{!-- у тілі титулка --}}
+					<button class="btn btn-light">Click</button> {{!-- кнопка у тілі --}}
+				</div> 
+				<div class="card-footer text-center">Footer</div>  {{!-- підвал картки --}}
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="card text-bg-success">
+				<div class="card-header text-center">Header</div>
+				<div class="card-body text-center">Content
+					<p class="card-title">Title</p>
+					<button class="btn btn-light">Click</button>
+				</div>
+				<div class="card-footer text-center">Footer</div>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="card text-bg-success">
+				<div class="card-header text-center">Header</div>
+				<div class="card-body text-center">Content
+					<p class="card-title">Title</p>
+					<button class="btn btn-light">Click</button>
+				</div>
+				<div class="card-footer text-center">Footer</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="card text-bg-success">
+				<div class="card-header text-center">Header</div>
+				<div class="card-body text-center">Content
+					<p class="card-title">Title</p>
+					<button class="btn btn-light">Click</button>
+				</div>
+				<div class="card-footer text-center">Footer</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+
+{{!-- ----------------------------------------------------------------------- --}}
+	<div class="row gy-5">
+		<section class="col-12">
+			<div class="card text-bg-dark">
+				<img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+				<div class="card-body">
+					<h5 class="card-title text-bg-primary">Product #16355</h5>
+					<p class="text-bg-secondary">USB <br>хаб</p>
+					<a href="/facebook" class="btn btn-primary">Open</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="row gy-5">
+		<section class="col-4">
+			<div class="card text-bg-primary">
+				{{!-- <div class="card-body"> --}}
+				<div class="card-header">
+					{{!-- <h5 class="card-title">Menu</h5> --}}
+					<div class="display-6">Menu</div>
+				</div>
+
+				<ul class="list-group">
+					<li class="list-group-item text-bg-dark">
+						<a href="#" class="btn btn-link">Home page</a>
+					</li>
+					<li class="list-group-item text-bg-warning">
+						<a href="#" class="btn btn-link">Summary page</a>
+					</li>
+					<li class="list-group-item text-bg-danger">
+						<a href="#" class="btn btn-link">Skills page</a>
+					</li>
+				</ul>
+
+				<div class="card-footer">
+					<button class="btn btn-dark btn-sm">Update List</button>
+				</div>
+			</div>
+		</section>
+	{{!-- </div> --}}
+
+	{{!-- <div class="row gy-5">
+		<section class="col-4">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<ul class="list-group">
+						<li class="list-group-item">Item 1.1</li>
+						<li class="list-group-item">Item 1.2</li>
+					</ul>
+				</li>
+				<li class="list-group-item">Item 2</li>
+				<li class="list-group-item">Item 3</li>
+			</ul>
+		</section>
+	</div> --}}
+	
+	{{!-- <div class="row gy-5"> --}}
+		<section class="col-8">
+			<table class="table table-striped table-bordered text-bg-success">
+				<thead>
+					<tr>
+						<th>
+							#id
+						</th>
+						<th>
+							name
+						</th>
+						<th>
+							age
+						</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>John</td>
+						<td>35</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Ivan</td>
+						<td>39</td>
+					</tr>
+					<tr>
+						<th>1</th>
+						<td>John</td>
+						<td>35</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Ivan</td>
+						<td>39</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+
+	<div class="row gy-5">
+		<section class="col-4">
+			<div class="card text-bg-success">
+				<div class="card-header text-center">Header</div>
+					<div class="card-body text-center">
+						<h6 class="car-title">This is title</h6>
+						<div>This is content</div>
+						<button class="btn btn-light">Click!</button>
+					</div>
+				<div class="card-footer text-center">Footer</div>
+			</div>
+		</section>
+	{{!-- </div> --}}
+
+	{{!-- <div class="row gy-5"> --}}
+		{{!-- <section class="col-4"> --}}
+			{{!-- <div class="row"> --}}
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+			</div>		
+		</section>
+	{{!-- </div> --}}
+
+	{{!-- <div class="row gy-5"> --}}
+		{{!-- <section class="col-4"> --}}
+			{{!-- <div class="row g-1"> --}}
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{!-- </div> --}}
+
+	{{!-- <div class="row gy-5"> --}}
+		{{!-- <section class="col-4"> --}}
+			{{!-- <div class="row gx-1 gy-5"> --}}
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card text-bg-success">
+						<div class="card-header text-center">Header</div>
+							<div class="card-body text-center">
+								<h6 class="car-title">This is title</h6>
+								<div>This is content</div>
+								<button class="btn btn-light">Click!</button>
+							</div>
+						<div class="card-footer text-center">Footer</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{!-- </div> --}}
+
 </main>
