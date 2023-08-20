@@ -1,0 +1,77 @@
+<main class="p-5">
+	<div class="row"> {{!-- контейнер --}}
+		<div class="col-12 mb-5"> 
+			{{!-- <div class="nav flex-column"> --}} {{!-- flex-column вивести елементи вертикально --}}
+				{{!-- nav-клас для контейнера --}}
+
+				<div class="nav nav-tabs"> {{!-- nav-tabs вивести меню навігації в форматі вкладок --}}
+					<div class="nav-item"> {{!-- nav-item клас для елемента --}}
+						<a href="#" class="nav-link active">Main</a> 
+					</div>
+					<br>
+					<div class="nav-item">
+						<a href="#" class="nav-link disabled">Catalog</a>
+					</div>
+					<br>
+					<div class="nav-item">
+						<a href="#" class="nav-link">Shop</a>
+						{{!-- <button class="btn btn-primary">Button</button> --}}
+					</div>
+				</div>
+			</div>
+			<div class="col-5 pe-5">
+				<div class="card">
+					{{!-- <div class="card-body"> --}}
+					<div class="pt-4 pb-3 px-4">		{{!-- р-2 - внутр.відступ --}}
+						<div class="nav flex-column">
+							<div class="nav-item mb-2"> {{!-- m-2 - зовн.відступ --}}
+								<div class="card">
+									<a href="/summary" class="nav-link">Home page</a>
+								</div>
+							</div>
+							<div class="nav-item mb-2">
+								<div class="card">
+									<a href="#" class="nav-link disabled">Bootstrap</a>
+								</div>
+							</div>
+							<div class="nav-item mb-2">
+								<div class="card">
+									<a href="/skills" class="nav-link">Faq</a>
+									{{!-- <button class="btn btn-primary">Button</button> --}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-7">
+				<div class="row">
+					<div class="col-12">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#">pc/noutebook</a>
+							</li>
+							<li class="breadcrumb-item">
+								Macbook
+							</li>
+						</ol>
+					</div>
+					<div class="col-12">
+						{{!-- <h6>Hello world <span class="badge text-bg-info rounded-pill text-uppercase">New</span></h6> --}}
+						{{!-- <button class="btn btn-primary rounded-pill">Click</button> --}}
+							<button class="btn btn-primary rounded-pill mx-5 my-3 ms-0">Click</button>
+						<div class="alert alert-primary"> {{!-- alert-вся строка виділена --}}
+							<h6 class="mb-2">Hello world <span class="badge text-bg-info rounded-pill text-uppercase">New</span></h6>
+							<p class="m-0">This is info</p>
+							 {{!--badge-значок з контентом --}}
+							 {{!-- rounded-pill-заокруглення країв компонента значка --}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</main>
