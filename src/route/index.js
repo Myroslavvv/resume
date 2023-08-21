@@ -886,11 +886,13 @@ router.get('/shophome', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
+
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
+
     layout: 'shop',
     navigation: {
       links: [
@@ -989,6 +991,7 @@ router.get('/shopcart', function (req, res) {
       ],
     },
 
+
     goodsOtherBlock: {
       title: 'See other products',
       cards: [
@@ -1034,6 +1037,7 @@ router.get('/shopcart', function (req, res) {
         },
       ],
     },
+
 
     footer: [
       [
