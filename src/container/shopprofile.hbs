@@ -42,7 +42,12 @@
 			<div class="nav nav tabs">
 				{{#each tabs}}
 					<div class="nav-item">
-						<a href="#" class="nav-link">{{this}}</a> 
+						{{#if @first}}
+						<a href="#" class="nav-link active">{{this}}</a> 
+						{{/if}}
+						{{#if @last}}
+						<a href="#" class="nav-link disabled">{{this}}</a> 
+						{{/if}}
 					</div>
 				{{/each}}
 			</div>
