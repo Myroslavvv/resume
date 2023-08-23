@@ -39,15 +39,10 @@
 	<h2>{{header}}</h2>
 	{{#with purchase}}
 		<div class="col-12">
-			<div class="nav nav tabs">
+			<div class="nav nav-tabs">
 				{{#each tabs}}
 					<div class="nav-item">
-						{{#if @first}}
-						<a href="#" class="nav-link active">{{this}}</a> 
-						{{/if}}
-						{{#if @last}}
-						<a href="#" class="nav-link disabled">{{this}}</a> 
-						{{/if}}
+							<a href="#" class="nav-link {{#if @first}}active{{/if}}">{{this}}</a> 
 					</div>
 				{{/each}}
 			</div>
