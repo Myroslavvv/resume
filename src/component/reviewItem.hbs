@@ -1,49 +1,48 @@
-	{{!-- <div>
-		<div class="card p-3">
-			{{#each reviewList}}
-				<div class="card my-3">
-					{{#with title}}
-						<b>{{userName}}</b>
-						<p>{{caption}}</p>
-						<div>{{date}}</div>
-					{{/with}}
-						{{!-- </div> --}}
-						<hr>
-						{{!-- <div class="card"> --}}
-					{{#with reviewBody}}
-						{{#with seller}}
-							<p>{{title}} : {{value}}</p>
-						{{/with}}
-						{{#with rating}}
-							<p>{{title}} : {{value}}</p>
-						{{/with}}
-						{{#each text}}
-							<p>{{this}}</p>
-						{{/each}}
-						{{#with advantages}}
-							<p>{{title}} : {{text}}</p>
-						{{/with}}
-						{{#with disadvantages}}
-							<p>{{title}} : {{text}}</p>
-						{{/with}}
-					
-						<div class="row">
-							<div>
-								{{#each images}}
-									<img src={{this}} alt="images">
-								{{/each}}
-							</div>
-						</div>
-
-						{{#each coments}}
-							<div class="card my-5 mx-5">
-								<b>{{userName}}</b>
-								<div>{{date}}</div>
-								<p>{{text}}</p>
-							</div>
-						{{/each}}
-					{{/with}}
-				</div>
-			{{/each}}
+<div>
+	{{#each reviewList}}
+	<div class="card my-5 p-3">
+		<div class="card my-3 p-2">
+			{{#with title}}
+				<b>{{userName}}</b>
+				<p>{{caption}}</p>
+				<div>{{date}}</div>
+			{{/with}}
 		</div>
-	</div> --}}
+
+		<div class="card p-2">
+		{{#with reviewBody}}
+			{{#with seller}}
+				<p>{{title}} : {{value}}</p>
+			{{/with}}
+			{{#with rating}}
+				<p>{{title}} : {{value}}</p>
+			{{/with}}
+			{{#each text}}
+				<p>{{this}}</p>
+			{{/each}}
+			{{#with advantages}}
+				<p>{{title}} : {{text}}</p>
+			{{/with}}
+			{{#with disadvantages}}
+				<p>{{title}} : {{text}}</p>
+			{{/with}}
+		
+			<div class="row">
+				<div class="p-2">
+					{{#each images}}
+						<img src={{this}} alt="images">
+					{{/each}}
+				</div>
+			</div>
+		</div>
+
+		{{#each coments}}
+			<div class="card my-5 mx-5 p-2">
+				<b>{{userName}}</b>
+				<div>{{date}}</div>
+				<p>{{text}}</p>
+			</div>
+		{{/each}}
+		{{/with}}
+	{{/each}}
+</div>
