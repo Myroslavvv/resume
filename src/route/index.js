@@ -886,12 +886,14 @@ router.get('/shophome', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
+
 router.get('/shopreview', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
     layout: 'shop',
+
 
     navigation: {
       links: [
@@ -1173,6 +1175,7 @@ router.get('/shopreview', function (req, res) {
 })
 
 // ================================================================
+
 
 // router.get Створює нам один ентпоїнт
 
@@ -1550,6 +1553,7 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+
 
 // Підключаємо роутер до бек-енду
 module.exports = router
