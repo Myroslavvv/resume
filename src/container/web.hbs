@@ -1,12 +1,13 @@
-<div>
-	{{> title data="WEB LANGUAGES" big=true}}
+<div class=" text-bg-primary">
+	<h1 class="text-center m-4"> WEB LANGUAGES</h1>
 	{{#with web}}
 	<div>
+		{{#each languages}}
+		<div class="card my-3 ms-3 text-bg-warning">
 		<ol>
-			{{#each languages}}
-			<li>
-				<div>{{name}}</div>
-				<div>version:{{version}}</div>
+			<li class="h5">
+				<h3>{{name}}</h3>
+				<h4>version:{{version}}</h4>
 				<div>{{description}}</div>
 				
 				<div>
@@ -65,11 +66,10 @@
 						{{/each}}
 					</ul>
 				</div>
-
-				<hr>
 			</li>
-			{{/each}}
 		</ol>
+		</div>
+		{{/each}}
 	</div>
 	{{/with}}
 </div>
