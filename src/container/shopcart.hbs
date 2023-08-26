@@ -1,0 +1,127 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+
+<main>
+	<div>
+		{{#with navigation}}
+		<div class="nav">
+			{{#each links}}
+				<div class="nav-item">
+					<a href={{href}} class="nav-link">{{text}}</a>
+				</div>
+			{{/each}}
+			<div class="nav-item">
+					<a href="#" class="nav-link disabled">Disabled</a>
+			</div>
+		</div>
+		{{/with}}
+	</div>
+	<hr>
+
+	<div class="mb-4">
+		{{#with header}}
+		<h2>{{title}}</h2>
+			{{#with button}}
+			<div class="my-2">
+				<a href={{link}} class="btn btn-outline-secondary">{{text}}</a>
+			</div>
+			{{/with}}
+		</div>
+		{{/with}}
+	</div>
+	<hr>
+
+	<p> {{>cartGoodsItem}}</p>
+	<hr>
+
+	<div class="mb-4">
+		{{#with total}}
+			<div class="display-4"><b>{{title}}</b></div>
+			<div class="display-3"><b>{{amount}}</b></div>
+			<h5>{{delivery}}</h5>
+			<div>
+				{{#each buttons}}
+				<div  class="pt-3">
+					{{#if isSuccess}}
+						<a href={{link}} class="btn btn-success">{{text}}</a>
+					{{/if}}
+				</div>
+				<div>
+					{{#if isOutline}}
+						<a href={{link}} class="btn btn-outline-success">{{text}}</a>
+					{{/if}}
+				</div>
+				{{/each}}
+			</div>
+		{{/with}}
+	</div>
+	<hr>
+
+	<div class="row my-5">
+		{{#with goodsOtherBlock}}
+			<h1 class="text-center">{{title}}</h1>
+				{{#each cards}}
+				<div class="col-4">
+					<div class="card text-bg-secondary mb-1 ms-1">
+						<div class="card-img-top">
+						<img class="card-img-top" src={{image}} alt={{title}}>
+						<div class="card-body">
+							<h5>{{title}}</h5>
+								{{#if isHot}}
+									<div class="badge rounded-pill text-bg-warning">HOT</div>
+								{{/if}}
+								{{#if idNew}}
+									<div class="badge rounded-pill text-bg-primary">NEW</div>
+								{{/if}}
+									</div>
+								<p>{{description}}</p>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+		{{/with}}
+	</div>
+	<hr>
+
+	<div class="row my-5">
+		{{#with subscribe}}
+		<div class="card text-bg-dark">
+			<div class="col-12">
+				<div class="card-body">
+					<h2>{{header}}</h2>
+					<p>{{description}}</p>
+					{{#each buttons}}
+					<div class="my-2">
+						<a href={{link}} class="btn btn-primary">{{text}}</a>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		{{/with}}
+	</div>
+	<hr>
+
+	<div class="nav">
+		{{#each footer}}
+		<div class="flex-column">
+			<div class="nav-item">
+				{{#each this}}
+					<a href={{link}} class="nav-link">{{text}}</a>
+				{{/each}}
+			</div>
+			<div class="nav-item">
+				<a href="#" class="nav-link disabled">Disabled</a>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+
+</main>
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}

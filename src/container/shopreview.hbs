@@ -1,0 +1,164 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<main>
+
+	<div>
+		{{#with navigation}}
+			<div class="nav">
+				{{#each links}}
+					<div class="nav-item">
+						<a href={{href}} class="nav-link">{{text}}</a>
+					</div>
+				{{/each}}
+				<div class="nav-item">
+					<a href="#" class="nav-link disabled">Disabled</a>
+				</div>
+			</div>
+		{{/with}}
+	</div>
+	
+	<div class="row">
+
+		{{#with formBlock}}
+			<h1 class=" my-4">{{header}}</h1>
+				<div class="col-8">
+					<div>
+						{{#with rating}}
+							<div>
+								<h5 class="my-4">{{title}} : {{value}}</h5>
+							</div>
+						{{/with}}
+					</div>
+
+					<div>
+						{{#with actionBlock}}
+							<div class="nav nav-tabs">
+								{{#each tabs}}
+									<div class="nav-item py-4">
+										<a href="#" class="nav-link {{#if @last}}active{{/if}}">{{text}}</a> 
+									</div>
+								{{/each}}
+							</div>
+
+							<div class="card my-5">
+								{{#with report}}
+									<h4 class="ms-3 mt-3">{{title}}</h4>
+									<div class="card-body">
+										{{#with button}}
+											<a href={{link}} class="btn btn-secondary">{{text}}</a>
+										{{/with}}
+									</div>
+								{{/with}}
+							</div>
+						{{/with}}
+					</div>				
+					<hr>
+
+					<div>
+						{{#with feedbackBlock}}
+						<h1 class="my-5">{{title}}</h1>
+							<div class="my-5">
+								{{#each buttons}}
+									{{#if isWarning}}
+										<a href={{link}} class="btn btn-warning">{{text}}</a>
+									{{/if}}
+									{{#if isSuccess}}
+										<a href={{link}} class="btn btn-success">{{text}}</a>
+									{{/if}}
+									{{#if isDanger}}
+										<a href={{link}} class="btn btn-danger">{{text}}</a>
+									{{/if}}
+								{{/each}}
+							</div>
+						{{/with}}
+					</div>
+				</div>
+
+				<div class="col-4">
+					{{#with goodsInfo}}
+						<div class="card">
+							<div class="card-img-top m-3">
+								<img src={{photo}} alt={{name}}>
+								<div class="card-body">
+									<h4>{{name}}</h4>
+								</div>
+							</div>
+						</div>
+						<div class="card my-3">
+							<div class="card-body">
+								<h4>{{price}}</h4>
+								{{#if inMarket}}
+									<h5>Є в наявності</h5>
+								{{/if}}
+									{{#each buttons}}
+										<div class="my-3">
+										{{#if isPrimary}}
+											<a href={{link}} class="btn btn-primary">{{text}}</a>
+										{{/if}}
+										</div>
+										<div>
+										{{#if isSecondary}}
+											<a href={{link}} class="btn btn-secondary">{{text}}</a>
+										{{/if}}
+										</div>
+									{{/each}}
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-body">
+								{{#with seller}}
+									<div>{{title}} : <b>{{value}}</b></div>
+								{{/with}}
+							</div>
+						</div>
+					{{/with}}
+				</div>
+		{{/with}}
+		<hr>
+		
+		<p>{{> reviewItem}}</p>
+
+		<div class="col-12">
+			{{#with service}}
+			<div class="card text-bg-success">
+				<div class="card-body text-center">
+					<h1>{{title}}</h1>
+					<p>{{description}}</p>
+					{{#each coments}}
+						<div class="">
+							<a href={{link}} class="btn btn-primary">{{text}}</a>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+			{{/with}}
+		</div>
+
+	</div>
+	<hr>
+
+	<div class="nav">
+			{{#each footer}}
+			<div class="flex-column">
+				<div class="nav-item">
+					{{#each this}}
+						<a href={{link}} class="nav-link">{{text}}</a>
+					{{/each}}
+				</div>
+				<div class="nav-item">
+					<a href="#" class="nav-link disabled">Disabled</a>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+
+</main>
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
